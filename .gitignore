@@ -89,3 +89,7 @@ ENV/
 .ropeproject
 
 .idea/*
+
+.html
+.png
+.mobi

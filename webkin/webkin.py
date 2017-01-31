@@ -16,10 +16,9 @@ import requests
 import subprocess
 import argparse
 
-
-parser = argparse.ArgumentParser(prog='kite')
+parser = argparse.ArgumentParser(prog='webkin')
 parser.add_argument('-u', '--url', action='store', type=str,
-                    help='Specify a url to parse',required=True)
+                    help='Specify a url to parse', required=True)
 parser.add_argument('-V', '--verbose', action='store_true',
                     help='Show more information on what''s happening.')
 parser.add_argument('-p', '--path', metavar="path", type=str,
@@ -27,13 +26,13 @@ parser.add_argument('-p', '--path', metavar="path", type=str,
 
 args = parser.parse_args()
 
-
 if args.verbose:
     log.setLevel(DEBUG)
 
+def main():
+    parse_url(url=args.url)
 
 def parse_url(url):
-    url = args.url
     directory = args.path or os.path.abspath(os.path.expanduser(os.curdir))
     try:
         os.makedirs(directory, exist_ok=True)
@@ -44,11 +43,17 @@ def parse_url(url):
     log.debug('Parsing {}'.format(url))
     parse_url = 'https://mercury.postlight.com/parser?url=' + url
     data = requests.get(parse_url, headers={'x-api-key': MERCURY_API_KEY}).json()
+    if data is None:
+        log.info("Couldn't parse the webpage.")
+        exit()
     return convert_html(data,directory)
 
 def convert_html(data,directory):
     command = ''
-    title = normalize('NFKD',data['title'])
+    try:
+        title = normalize('NFKD',data['title'])
+    except:
+        title='webpage'
     filename = os.path.join(directory, title.replace(" ","_"))
     html_file=filename+".html"
     mobi_file=filename+".mobi"
@@ -74,8 +79,6 @@ def convert_html(data,directory):
         try:
             build_line = ' ./ebook-convert ' + html_file + " " + mobi_file + command
             args = split(build_line)
-            log.debug(args)
-
             subprocess.call(args, cwd='/Applications/calibre.app/Contents/console.app/Contents/MacOS/')
         except:
             log.error('Please check if calibre CLI tools are installed.')
@@ -84,7 +87,6 @@ def convert_html(data,directory):
         try:
             build_line = 'ebook-convert ' + html_file + " " + mobi_file + command
             args = split(build_line)
-            log.debug(args)
             subprocess.call(args)
         except:
             log.error('Please check if ebook-convert is added in your path.')
@@ -94,8 +96,8 @@ def convert_html(data,directory):
 
 
 if __name__=='__main__':
-    log.info('Initiating Kite...')
-    log.debug('Initiating Kite with DEBUG mode')
+    log.info('Initiating Web-Kindle...')
+    log.debug('Initiating Web-Kindle with DEBUG mode')
     if not check_for_tokens():
         exit()
-    parse_url(args.url)
+    exit(main())
