@@ -18,9 +18,9 @@ def check_for_tokens():
     EMAIL_PASSWORD = getenv('EMAIL_PASSWORD')
     SMTP_HOST_NAME = getenv('SMTP_HOST_NAME')
 
-    # DEFAULT SMTP PORT IS 465 for SSL in GMail, SET YOURS HERE TO CHANGE
+    # DEFAULT SMTP PORT IS 587 for non SSL in GMail, SET YOURS HERE TO CHANGE
 
-    SMTP_PORT = getenv('SMTP_PORT',465)
+    SMTP_PORT = getenv('SMTP_PORT',587)
     MERCURY_API_KEY = getenv('MERCURY_API_KEY')
     log.debug("Tokens fetched: {} {} {} {} {} ".format(KINDLE_EMAIL, AMAZON_EMAIL,
                                                 EMAIL_PASSWORD,SMTP_HOST_NAME,SMTP_PORT))
