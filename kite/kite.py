@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-from .config import MERCURY_API_KEY
-from .scaffold import *
+from .config  import MERCURY_API_KEY
+from .scaffold  import *
 from .send_email import send_email
 
 from PIL import Image

@@ -2,8 +2,8 @@ from email import encoders
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
-from config import KINDLE_EMAIL,AMAZON_EMAIL,SMTP_HOST_NAME,SMTP_PORT,EMAIL_PASSWORD
-from scaffold import *
+from .config import KINDLE_EMAIL,AMAZON_EMAIL,SMTP_HOST_NAME,SMTP_PORT,EMAIL_PASSWORD
+from .scaffold import *
 from sys import exit
 
 import smtplib

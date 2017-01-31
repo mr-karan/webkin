@@ -32,7 +32,11 @@ setup(
     license='MIT',
     description='Send web pages to Kindle',
     long_description=long_description,
-    scripts=['bin/kite'],
+    entry_points={
+        'console_scripts': [
+            'kite = kite.kite:main',
+        ],
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
