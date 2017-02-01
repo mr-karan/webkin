@@ -44,7 +44,7 @@ You need to export tokens to add your `Amazon Email Address` (should be present 
 
  - To obtain your Mercury Web API key, signup [here](https://mercury.postlight.com/web-parser/)
  - If you're using GMail, you need to add `smtp.gmail.com` as your `SMTP_Host_NAME` while the default port is `587` so you can skip adding that. If you're using any other email provider, you can find a comprehensive list over [here](https://www.arclab.com/en/kb/email/list-of-smtp-and-pop3-servers-mailserver-list.html) and add accordingly
- - If you're using GMail and have turned on 2FA (which you must absolutely), you rather need to add an Application Password instead of your email password. Set a new one over [here](Set a new application password [here](https://security.google.com/settings/security/apppasswords)
+ - If you're using GMail and have turned on 2FA (which you must absolutely), you rather need to add an Application Password instead of your email password. Set a new one over [here](https://security.google.com/settings/security/apppasswords)
 
 ## Credits
 
