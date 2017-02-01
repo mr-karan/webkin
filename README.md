@@ -24,7 +24,7 @@ Note : Python3+ only.
 
 `webkin -u=https://medium.com/@mrkaran/my-development-setup-7e767d33fc41 --verbose`
 
-![img](http://i.imgur.com/yRgFfzF.jpg)
+![img](http://i.imgur.com/aeIzhPQ.jpg)
 
 ### Pre Installation
 
