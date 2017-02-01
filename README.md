@@ -29,8 +29,8 @@ Note : Python3+ only.
 ### Pre Installation
 
 `webkin` depends on calibre CLI tools and uses `ebook-convert` to convert `html` to `mobi` format. Please ensure that you have Calibre installed alongwith CLI tools and `ebook-convert` is present in your PATH. 
-For OSX users, you don't need to do anything besides installing Calibre.
-I have tested it on Ubuntu 16.04 fresh VM and after installing Calibre, it worked fine. If you install using this method, you need to manually add `ebook-convert` to your path, while if you install it from PPA, it's automatically in your PATH.
+For OSX users, you don't need to do anything besides [installing Calibre](http://calibre-ebook.com/download_osx).
+I have tested it on Ubuntu 16.04 fresh VM and after installing Calibre, it worked fine. If you install using [this](http://calibre-ebook.com/download_linux) method, you need to manually add `ebook-convert` to your path, while if you install it from PPA, it's automatically in your PATH.
 
 ```
 sudo add-apt-repository ppa:n-muench/calibre2
