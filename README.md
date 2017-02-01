@@ -1,12 +1,13 @@
 # webkin
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mr-karan/webkin/master/LICENSE)
 
->webkin lets you send webpages to your kindle device through terminal. 
+webkin lets you send webpages to your kindle device through terminal. 
+
 Note : Python3+ only.
 
 ### Installation : 
 
-> `pip install webkin`
+    pip install webkin
 
 [![asciicast](https://asciinema.org/a/101549.png)](https://asciinema.org/a/101549)
 
@@ -14,29 +15,30 @@ Note : Python3+ only.
 
 #### To parse URL and send it to your kindle email id.
 
-`webkin --url `
+    webkin --url
 
 #### To change the default directory.
 
-`webkin --url=<url> --path=</path/to/your/place> `
+     webkin --url=<url> --path=</path/to/your/place>
 
-> Example : 
+  Example : 
 
-`webkin -u=https://medium.com/@mrkaran/my-development-setup-7e767d33fc41 --verbose`
+    webkin -u=https://medium.com/@mrkaran/my-development-setup-7e767d33fc41 --verbose`
 
 ![img](http://i.imgur.com/aeIzhPQ.jpg)
 
 ### Pre Installation
 
 `webkin` depends on calibre CLI tools and uses `ebook-convert` to convert `html` to `mobi` format. Please ensure that you have Calibre installed alongwith CLI tools and `ebook-convert` is present in your PATH. 
+
 For OSX users, you don't need to do anything besides [installing Calibre](http://calibre-ebook.com/download_osx).
 I have tested it on Ubuntu 16.04 fresh VM and after installing Calibre, it worked fine. If you install using [this](http://calibre-ebook.com/download_linux) method, you need to manually add `ebook-convert` to your path, while if you install it from PPA, it's automatically in your PATH.
 
-```
-sudo add-apt-repository ppa:n-muench/calibre2
-sudo apt-get update
-sudo apt-get install calibre
-```
+
+    sudo add-apt-repository ppa:n-muench/calibre2
+    sudo apt-get update
+    sudo apt-get install calibre
+
 [Source](http://askubuntu.com/questions/338172/how-to-install-calibre-on-ubuntu-12-04)
 
 ### First Time Setup 
@@ -56,11 +58,11 @@ You need to export tokens to add your `Amazon Email Address` (should be present 
 
 Feel free to report any issues and/or send PRs for additional features.
 
-## Why ? 
+## Why? 
 
 Well, there are a couple of tools to already do this task, but I couldn't find any Open source tool which does it. Though Kindle uses a `MOBI` format which itself is closed source, I found the need of a CLI application to automate this boring task for me. If you're looking for a tool to do this but don't wanna use a terminal, you can also take a look at [this](https://chrome.google.com/webstore/detail/send-to-kindle-for-google/cgdjpilhipecahhcilnafpblkieebhea?hl=en) chrome extension. I like my stuff in the Terminal so I did it :)  
 
 ### License
-> MIT © Karan Sharma 
 
-> [LICENSE included here](LICENSE)
+MIT © Karan Sharma 
+[LICENSE included here](LICENSE)
