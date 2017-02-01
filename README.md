@@ -1,9 +1,9 @@
 # webkin
-[![version](https://img.shields.io/pypi/v/webkin.svg)](https://pypi.python.org/pypi/webkin/)
-[![supported](https://img.shields.io/pypi/pyversions/webkin.svg)](https://pypi.python.org/pypi/webkin/)
-[![Twitter](https://img.shields.io/twitter/url/https/pypi.python.org/pypi/webkin.svg?style=social?style=flat-square)](https://twitter.com/intent/tweet?text=Send webpages to Kindle through terminal :&url=https://github.com/mr-karan/webkin)
+[![version](https://img.shields.io/badge/webkin-1.0-brightgreen.svg](https://pypi.python.org/pypi/webkin/)
+[![Twitter](https://img.shields.io/twitter/url/https/pypi.python.org/pypi/webkin.svg?style=social&style=flat-square)](https://twitter.com/intent/tweet?text=Send webpages to Kindle through terminal :&url=https://github.com/mr-karan/webkin)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mr-karan/webkin/master/LICENSE)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![PyPI](https://img.shields.io/pypi/dm/webkin.svg?style=flat-square)](https://pypi.python.org/pypi/webkin)
+
 >webkin lets you send webpages to your kindle device through terminal. 
 Note : Python3+ only.
 
