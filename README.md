@@ -12,7 +12,7 @@ Note : Python3+ only.
 
 [![asciicast](https://asciinema.org/a/101549.png)](https://asciinema.org/a/101549)
 
-###Avilable commands : 
+### Avilable commands : 
 
 #### To parse URL and send it to your kindle email id.
 
